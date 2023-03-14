@@ -1,0 +1,91 @@
+{{#if success}}
+<nav>
+        <div class="menu-bar">
+      <input type="checkbox" id="check" onclick="myFunction()">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" style="color: palegreen;">EMSI</label>
+      
+      <ul>
+        <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a class="active" href="/etudiants"><span class="glyphicon glyphicon-list-alt"></span> Etudiants</a></li>
+        <li><a href="/utilisateurs"><span class="glyphicon glyphicon-user"></span> Utilisateurs</a></li>
+        <li><a href="/filieres"><span class="glyphicon glyphicon-education"></span> Filières</a></li>
+		
+        <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+      </ul>
+      </div>
+    </nav>
+
+<div class="container admin">
+		<div class="row">
+			
+				<h1><strong>Ajouter un étudiant</strong></h1>
+				<br>
+				<form class="form" action="/etudiants/insert_e" method="POST">
+					<div class="form-group">
+						<label for="nom">Nom:</label> 
+						<input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
+					</div>
+
+					<div class="form-group">
+						<label for="prenom">Prénom:</label> 
+						<input type="text" class="form-control" id="prenom" placeholder="Prénom" name="prenom">
+						
+					</div>
+
+					<div class="form-group">
+						<label for="numapg">numApg:</label> 
+						<input type="text" class="form-control" id="numapg" placeholder="Numapg" name="numapg">
+						
+					</div>
+
+					<div class="form-group">
+						<label for="date_naissance">Date de naissance:</label> 
+						<input type="date"  class="form-control" id="date_naissance" placeholder="jj/dd/yyyy" name="date_naissance">
+						
+					</div>
+
+					<div class="form-group">
+						<label for="filiere">Filière:</label> 
+                        <!--<input type="text" class="form-control" id="filiere" placeholder="Filière" name="filiere">-->
+						<select class="form-control" id="filiere" name="filiere">
+							{{#each liste_f}}
+							<option value="{{this.filiere}}"> {{this.filiere}} </option>
+							{{/each}}
+
+						</select>
+					
+					</div>
+
+
+
+					
+
+
+                
+           <div class="form-actions">
+           	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span>Ajouter</button>
+
+           	<a class="btn btn-primary" href="/etudiants"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+           	
+
+
+
+           </div>
+           </form>
+
+
+
+
+
+
+			
+
+
+			
+
+		</div>
+	</div>	
+{{/if}}

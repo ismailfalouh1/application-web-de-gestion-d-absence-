@@ -1,0 +1,37 @@
+<section class="bg">
+<div class="contact-section">
+
+  <h1>Manuel</h1>
+  <div class="border"></div>
+  <form class="contact-form form" action="/generate-manuel" method="post">
+   <!-- <input type="text" class="contact-form-text" placeholder="Your name">
+    <input type="email" class="contact-form-text" placeholder="Your email">-->
+
+    <select class="contact-form-text" id="semestre" name="semestre">
+            {{#each liste_semestre}}
+			<option value="{{this.semestre}}"> {{this.semestre}} </option>
+	     {{/each}}
+     </select>
+    <select class="contact-form-text" name="filiere" id="filiere">
+            {{#each liste_f}}
+			<option value="{{this.filiere}}"> {{this.filiere}} </option>
+	     {{/each}}
+     </select>
+
+     <select class="contact-form-text" name="module" id="module">
+       {{#each liste_module}}
+			<option value="{{this.nom}}"> {{this.nom}} </option>
+	     {{/each}}
+     </select>
+
+     <select class="contact-form-text" name="seance" id="seance">
+            {{#each liste_seance}}
+			<option value="{{this.seance}}"> {{this.seance}} </option>
+	     {{/each}}
+     </select>
+   <button type="submit" class="btn btn-success">Confirmer</button>
+
+   <a class="btn btn-primary" href="/home_p"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+  </form>
+</div>
+</section>

@@ -1,0 +1,291 @@
+.login{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background:url(emsi.jpg) 75% 50% no-repeat;
+	background-size: cover;
+	display: table;
+}
+
+.signin{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.center{
+	text-align: center;
+}
+
+h2{
+	font-weight: lighter;
+	color: #ffffff;
+	font-size: 50px;
+	text-align: center;
+}
+
+input{
+	display: block;
+	width: 350px;
+	height: 50px;
+	background: rgba(255, 255, 255, 0.3);
+	outline: none;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	font-weight: lighter;
+	font-size: 14px;
+	margin-bottom: 10px;
+	padding-left: 10px;
+	border-radius: 5px;
+}
+
+
+button{
+	width: 350px;
+	height: 50px;
+	font-size: 16px;
+	background-color: #000000;
+	font-weight: lighter;
+	color: #ffffff;
+	border: 0px;
+	border-radius: 5px;
+}
+
+button.btn{
+	color: #ffffff;
+}
+
+/* ************** */
+
+nav{
+	background: #00695c;
+	height: 4.5rem;
+	width: 100%;
+	margin-bottom: 3%;
+  }
+  label.logo{
+	color: white;
+	font-size: 35px;
+	line-height: 45px;
+	padding: 0 100px;
+	font-weight: bold;
+  }
+  .menu-bar ul{
+	float: right;
+	margin-right: 20px;
+  }
+  .menu-bar ul li{
+	display: inline-block;
+	line-height: 45px;
+	margin: 0 5px;
+  }
+  .menu-bar ul li a{
+	color: white;
+	font-size: 14px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	/*text-transform: uppercase;*/
+  }
+  a.active,a:hover{
+	background: #1b9bff;
+	transition: .5s;
+  }
+  .checkbtn{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 45px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+  }
+  #check{
+	display: none;
+  }
+  @media (max-width: 952px){
+	label.logo{
+	  font-size: 30px;
+	  padding-left: 50px;
+	}
+	.menu-bar ul li a{
+	  font-size: 12px;
+	}
+  }
+  @media (max-width: 858px){
+	.checkbtn{
+	  display: block;
+	}
+	ul{
+	  position: fixed;
+	  width: 100%;
+	  height: 100vh;
+	  background: #2c3e50;
+	  top: 45px;
+	  left: -100%;
+	  text-align: center;
+	  transition: all .5s;
+	}
+	.menu-bar ul li{
+	  display: block;
+	  margin: 50px 0;
+	  line-height: 30px;
+	}
+	.menu-bar ul li a{
+	  font-size: 20px;
+	}
+	a:hover,a.active{
+	  background: none;
+	  color: #00695c;
+	}
+	#check:checked ~ ul{
+	  left: 0;
+	}
+
+  }
+
+  .sub-menu{
+	  display: none;
+  }
+
+  .menu-bar ul li:hover .sub-menu{
+	  display: block;
+	  /*margin: 10px;*/
+  }
+
+  .logo{
+	  color: #ffffff !important;
+  }
+
+
+
+/*
+  .dropdown {
+	float: left;
+	overflow: hidden;
+  }
+  
+ 
+  .dropdown .dropbtn {
+	font-size: 16px;
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit; 
+	margin: 0; 
+  }
+  
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+	background-color: red;
+  }
+  
+ 
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+
+  */
+
+  /*.align{
+	  text-align: -webkit-center;
+  }
+
+  .select{
+	  width: 350px;
+	  height: 50px;
+  }*/
+
+ 
+  .bg{
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100vh;
+		background:url(FRS-09-2019_pg27-4.jpg) 50% 50% no-repeat;
+		background-size: cover;
+		display: table;
+	}
+  
+  /*.contact-section{
+    background: url(Clackamas_High_School_1.jpg) no-repeat center;
+	background-size: cover;
+	width:100%;
+	height: 100vh;
+    
+  }*/
+  .bg h1{
+    text-align: center;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	padding-top: 5%;
+  }
+  .border{
+    width: 100px;
+    height: 10px;
+    background: #34495e;
+    margin: 40px auto;
+  }
+  
+  .contact-form{
+    max-width: 600px;
+    margin: auto;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  
+  .contact-form-text{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 16px 0;
+    border: 0;
+    background: #111;
+    padding: 20px 40px;
+    outline: none;
+    color: #ddd;
+    transition: 0.5s;
+  }
+  .contact-form-text:focus{
+    box-shadow: 0 0 10px 4px #34495e;
+  }
+  textarea.contact-form-text{
+    resize: none;
+    height: 120px;
+  }
+  a.btttn{
+	border: 0;
+    background: #34495e;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+	transition: 0.5s;
+	text-decoration: none;
+  }
+  a.btttn:hover{
+	background: #2980b9;
+	text-decoration: none;
+  }
+
+  .contact-form-btn{
+    float: right;
+    border: 0;
+    background: #34495e;
+    color: #fff;
+    padding: 12px 50px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .contact-form-btn:hover{
+    background: #2980b9;
+  }
+  

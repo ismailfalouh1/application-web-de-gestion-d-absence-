@@ -1,0 +1,169 @@
+                  
+    <nav>
+        <div class="menu-bar">
+      <input type="checkbox" id="check" onclick="myFunction()">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" style="color: palegreen;">EMSI</label>
+      
+      <ul>
+        <li><a href="/home_p"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a class="active" href="/generate-manuel"><span class="glyphicon glyphicon-pencil"></span> Absence</a></li>
+        <li><a href="/seances"><span class="glyphicon glyphicon-list-alt"></span> Séances</a></li>
+        <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+      </ul>
+      </div>
+    </nav>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="editmodal" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="height: 50px;">
+        <button style="width: 20px; height: 35px;" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" style="text-align: center;">Absence</h4>
+      </div>
+      <form action="/generate-manuel/absence" method="POST">
+        
+      <div class="modal-body">
+        <div class="form-group">
+            <input type="hidden" name="_id" id="_id" value="{{id}}">
+					</div>
+        <div class="form-group">
+            <input type="hidden" name="id" id="id">
+					</div>
+          <div class="form-group">
+            <select class="form-control" id="etat" name="etat">
+							<option value="absent"> Absent </option>
+							<option value="present"> Présent </option>
+							
+
+						</select>
+					</div>
+          
+          
+
+				
+          
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button"  data-dismiss="modal" style="width: 130px;">Fermer</button>
+        <button type="submit" name="updatedata" style="width: 130px;" class="btn btn-primary">Enregistrer</button>
+      </div>
+      </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+	<div class="container admin" id="admin">
+    <div class="row">
+        <h1 class="center"><strong>Liste des étudiants </strong></h1>
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prenom</th>
+                    <th>Etat</th>
+                    <th>Action</th>
+                    
+
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each liste}}
+
+
+                
+                
+
+
+ <tr>
+                      <td>{{this.nom}}</td>
+                     <td>{{this.prenom}}</td>
+                     <td>{{this.etat}}</td>
+                     <td width="250">
+                         
+                      <!--<a class="btn btn-primary" href="/update/{{this.id}}"><span class="glyphicon glyphicon-pencil"></span>  Modifier</a>
+                       &nbsp;-->
+                       <button type="button" class="btn btn-success editbtn"> Modifier</button>
+                      
+
+                     </td>
+
+                     <td style="display: none;">{{this._id}}</td>
+
+
+
+
+                 </tr>
+                 
+
+
+                 {{/each}}
+
+
+
+
+
+
+
+
+
+                
+
+
+            </tbody>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+</div>
+   
+<script>
+
+    $(document).ready(function(){   
+    $(".editbtn").on('click', function(){        
+
+            $('#editmodal').modal({
+                show: true
+            });
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function() {
+            return $(this).text();
+        }).get();
+
+        $('#nom').val(data[0]);
+        $('#id').val(data[4]);
+        
+
+    });
+});
+</script>

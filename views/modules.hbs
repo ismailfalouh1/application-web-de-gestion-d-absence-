@@ -1,0 +1,105 @@
+
+
+    <nav>
+        <div class="menu-bar">
+      <input type="checkbox" id="check" onclick="myFunction()">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo" style="color: palegreen;">EMSI</label>
+      
+      <ul>
+        <li><a href="/home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="/etudiants"><span class="glyphicon glyphicon-list-alt"></span> Etudiants</a></li>
+        <li><a href="/utilisateurs"><span class="glyphicon glyphicon-user"></span> Utilisateurs</a></li>
+        <li><a href="/filieres"><span class="glyphicon glyphicon-education"></span> Filières</a></li>
+        <li><a class="active" href="/modules"><span class="glyphicon glyphicon-education"></span> Modules</a></li>
+        <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>
+      </ul>
+      </div>
+    </nav>
+
+
+
+	<div class="container admin" id="admin">
+    <div class="row">
+        <h1 class="center"><strong>Liste des Modules </strong><a href="modules/insert_m" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-plus"></span> Ajouter</a></h1>
+       
+
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Module</th>
+                    <th>Actions</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                {{#each liste}}
+
+
+                
+                
+
+
+ <tr>
+                     <td>{{this.nom}}</td>
+                     
+                     <td width="250">
+                         
+                      <a class="btn btn-primary" href="/modules/update_m/{{this.id}}"><span class="glyphicon glyphicon-pencil"></span>  Modifier</a>
+                       &nbsp;
+                      <a class="btn btn-danger" href="/modules/delete_m/{{this.id}}"><span class="glyphicon glyphicon-remove"></span>  Supprimer</a>
+
+
+                     </td>
+                    
+
+
+
+
+                 </tr>
+                 
+
+
+                 {{/each}}
+
+
+
+
+
+
+
+
+
+                
+
+
+            </tbody>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+
+
+    </div>
+    
+
+
+
+
+
+
+
+</div>
